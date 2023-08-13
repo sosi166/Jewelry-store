@@ -1,0 +1,266 @@
+
+@font-face {
+    src: local('Noyemi'), url('./fonts/Noyemi.ttf') format( );
+    font-family: 'Noyemi';
+}
+
+$ColorText: #551796;
+$ColorBackground: #F1F1EC;
+$ColorHover: #9A56E2;
+$ColorLight: #E0AAFF;
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
+    font-family: Noyemi;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $ColorBackground;
+}
+
+textarea, input {
+    background-color: $ColorLight;
+    color: $ColorText;
+}
+
+textarea {
+    padding: 20px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+}
+
+input {
+    padding: 20px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+}
+
+select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: $ColorText;
+    width: 50px;
+    height: 30px;
+    border: 1px dashed $ColorText;
+    outline: none;
+
+    &:hover {
+        background-color: darken($ColorBackground, 2);
+    }
+}
+
+option {
+}
+
+.range {
+    background-color: $ColorLight;
+}
+
+.range::-webkit-slider-thumb {
+    background: $ColorText;
+}
+
+.range:-moz-range-thumb {
+    background: $ColorText;
+}
+
+h1, h2, h3, p, a {
+    color: $ColorText;
+    text-decoration: none;
+}
+
+p {
+    font-size: 18px;
+    margin: 5px;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-size: 34px;
+}
+
+h3 {
+    margin: 5px;
+    font-size: 28px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
+input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+    margin-right: 0px;
+    cursor: pointer;
+    font-size: 10px;
+    visibility: hidden;
+}
+
+input[type=checkbox]:after,
+input[type=checkbox]::after {
+    content: " ";
+    background-color: $ColorBackground;
+    display: inline-block;
+    margin-left: 5px;
+    padding-bottom: 0px;
+    color: $ColorText;
+    width: 15px;
+    height: 15px;
+    visibility: visible;
+    border: 1px dotted $ColorText;
+    padding-left: 6px;
+    border-radius: 30px;
+}
+
+input[type=checkbox]:checked:after,
+input[type=checkbox]:checked::after {
+    content: "\2714";
+    font-weight: bold;
+}
+
+.btn {
+    padding: 12px 32px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    background: $ColorText;
+    color: $ColorBackground;
+    border: none;
+    border-radius: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.btn-light {
+    @extend .btn;
+    background: transparent;
+    color: $ColorText;
+    transition: 0.3s;
+    border: 1px dotted $ColorText;
+}
+
+.btn-lng {
+    background: transparent;
+    color: $ColorText;
+    border: none;
+    padding: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.btn:hover, .btn-light:hover {
+    background: $ColorLight;
+    color: $ColorText;
+    transition: 0.3s;
+}
+
+svg {
+    color: $ColorText;
+    height: 25px;
+    width:25px;
+}
+
+.react-multiple-carousel__arrow:hover {
+    background: $ColorText !important;
+}
+
+.react-multiple-carousel__arrow {
+    background: $ColorText !important;
+}
+
+.react-multiple-carousel__arrow::before {
+    color: $ColorBackground !important;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+:-ms-input-placeholder {
+    color: white;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: $ColorBackground;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $ColorText;
+    border-radius: 30px;
+}
+
+@media screen and (max-width: 768px) {
+
+    p {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+    .btn, .btn-lng {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 400px) {
+
+    p {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+    .btn, .btn-lng {
+
+        font-size: 0.7rem;
+    }
+}

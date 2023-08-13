@@ -1,0 +1,60 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: white;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin: 20px 0 50px 0;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 70%;
+
+        .inputs {
+            display: flex;
+            gap: 25px;
+
+            input {
+                width: 50%;
+            }
+        }
+    }
+
+    p {
+        margin-top: 25px;
+    }
+
+    .social {
+        display: flex;
+
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0px 10px 0px 10px;
+        }
+
+        margin-bottom: 25px;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    .contact {
+        form {
+            .inputs {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

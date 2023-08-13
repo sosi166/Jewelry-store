@@ -1,0 +1,49 @@
+.product {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 5px;
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+
+        img {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            position: center center;
+        }
+    }
+
+    button {
+        border: none;
+    }
+}
+@media screen and (max-width: 1024px) {
+
+    .product {
+        width: 300px;
+
+        .product-card {
+            img {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+
+    .product {
+        width: 250px;
+
+        .product-card {
+            img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+}
